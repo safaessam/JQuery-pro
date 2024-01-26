@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="libraries/bootstrap.min.css">
+    <script src="libraries/jquery-3.1.1.js"></script>
+    <script src="js/script.js"></script>
+    <a href="login.html">Login</a>
+    <script>
+        $(document).ready(function() {
+            $('#signupForm').submit(function(e) {
+                e.preventDefault(); 
+                // Perform form validation
+                var username = $('#username').val();
+                var email = $('#email').val();
+                var password = $('#password').val();
+                
+                if (username === '' || email === '' || password === '') {
+                    displayError('Please fill in all fields');
+                    return;
+                }
+                
+                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email.match(emailPattern)) {
+                    displayError('Please enter a valid email address');
+                    return;
+                }
+                
+                var userData = {
+                    username: username,
+                    email: email,
+                    password: password
+                };
+                localStorage.setItem('userData', JSON.stringify(userData));
+                
+                alert('Signup successful');
+                $('#signupForm')[0].reset(); 
+                
+                window.location.href = 'login.html';
+            });
+            function displayError(errorMessage) {
+                $('#error').text(errorMessage);
+                $('#error').show();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Signup</h1>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Signup">
+        </form>
+        <div id="error" class="alert alert-danger" style="display: none;"></div>
+    </div>
+</body>
+</html>
