@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon"
+    href="https://img.icons8.com/external-flatart-icons-flat-flatarticons/64/null/external-stars-nature-flatart-icons-flat-flatarticons-1.png"
+    type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>JUMIA</title>
+</head>
+
+<body onload="homeLoad()">
+  <!-- Navbar gif -->
+  <img src="https://ng.jumia.is/cms/0-1-cpr/2022/june-14/free-delivery-banner.gif" alt="" class="d-md-block d-none"
+    style="width: 100%;">
+  <img src="https://ng.jumia.is/cms/0-1-cpr/2022/june-14/free-delivery-Mobile-strip.gif" class="d-md-none" alt=""
+    style="width: 100%;">
+  <!-- Small Devices Navbar-->
+  <div
+    class="container-fluid bg-white d-md-none d-block align-items-center justify-content-between shadow p-2 sticky-top"
+    id="smNavbar">
+    <div class="d-flex justify-content-between">
+      <em> <a class="navbar-brand fw-bold fs-5" href="jumia.html" id="olaBrand">JUMIA <i
+            class="bi bi-stars text-warning"></i></a></em>
+      <span class="fs-2">
+        <span>
+          <a href="jumia.html"><i class="bi bi-house-door"></i></a>
+        </span>
+        <span>
+          <a href="cart.html"> <i class="bi bi-cart"></i></a>
+        </span>
+      </span>
+    </div>
+
+    <input class="nosubmit" type="search" placeholder="Search..." id="searchBar">
+  </div>
+
+  <!-- Large Device Navbar -->
+  <nav class="nav sticky-top navbar-expand bg-white d-none d-md-block shadow p-lg-3 ps-lg-5 " id="lgNavbar">
+    <div class="d-flex align-items-center gap-lg-3 ps-lg-5">
+      <em class="navbar-brand fw-bold fs-5 ps-5" href="jumia.html">jumia<i class="bi bi-stars text-warning"></i></em>
+      <button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav align-items-center gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link" href="jumia.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="home-kitchen.html">Home and Kitchen</a></li>
+              <li><a class="dropdown-item" href="phonesTablet.html">Phones and Tablets</a></li>
+              <li><a class="dropdown-item" href="electronics.html">Electronics</a></li>
+              <li><a class="dropdown-item" href="fashion.html">Fashion</a></li>
+              <li><a class="dropdown-item" href="otherCategories.html">Other Categories</a></li>
+            </ul>
+          </li>
+          <li class="d-none d-md-flex" style="height: 50px;">
+            <input type="text" class="form-control" placeholder="Search for categories...">
+            <button class="searchButton">
+              Search
+            </button>
+          </li>
+         </li> <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="signin.html"><i class="bi bi-person-circle"
+              style="font-size: large;">
+            </i>SIGN IN</a>
+        </li>
+
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="signin.html"><i class="bi bi-person-circle"
+                style="font-size: large;">
+              </i>REGISTER</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#"><i class="bi bi-question-lg" style="font-size: large;">
+                Help</i></a>
+          </li>
+          <li class="nav-item position-relative">
+            <a class="nav-link " aria-current="page" href="cart.html"><i class="bi bi-cart3 " style="font-size: large;">
+                Cart</i>
+              <span class="position-absolute start-100 translate-middle badge rounded-pill bg-danger" style="top: 10px;"
+                id="badge">
+                0
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- carousel -->
+  <section class="m-md-4 m-2">
+    <div class="row">
+      <div class="col-md-6">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="6000">
+              <img src="https://ng.jumia.is/cms/0-1-cpr/2023/large-item-updated/Slider_copy.jpg"
+                class="d-block w-100 rounded" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img
+                src="https://ng.jumia.is/cms/0-1-weekly-cps/0-2023/w11-budget-store/Desktop_Homepage_Slider__712x384.jpg"
+                class="d-block w-100 rounded" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="6000">
+              <img src="https://ng.jumia.is/cms/0-5-TechWeek/2023/712x384_2.jpg" class="d-block w-100 rounded"
+                alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 d-none d-md-block">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+              <img src="https://ng.jumia.is/cms/0-1-initiatives/flashsale/2023/Slider.png" class="d-block w-100 rounded"
+                alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="6000">
+              <img src="https://ng.jumia.is/cms/0-1-initiatives/jumia-pay/2023/feb/Mall_BT_712x384.jpg"
+                class="d-block w-100 rounded" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img src="https://ng.jumia.is/cms/0-1-cpr/2023/large-item-updated/Slider_copy.jpg"
+                class="d-block w-100 rounded" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Exported Product Item -->
+  <section class="todayDeals container-fluid mt-3" style="display: none;" id="exportedItemsContainer">
+    <nav class="p-3" style="background-color: #4971f7;">
+      <ul class="nav justify-content-between">
+        <li class="nav-item">
+          <h5 id="exproHead" class="text-white">New Products</h5>
+        </li>
+    </nav>
+    <div>
+      <div class="row mt-2" id="exportedItems">
+      </div>
+    </div>
+  </section>
+
+  <!-- Official Store item -->
+  <section class="todayDeals container-fluid mt-3">
+    <nav class="p-3" style="background-color: #c3def0;">
+      <ul class="nav justify-content-between">
+        <li class="nav-item">
+          <h5>Official Store item</h5>
+        </li>
+        <li class="nav-item seeAll">
+          <a href="phonesTablet.html" class="text-dark" style="text-decoration: none;">See All Items > </a>
+        </li>
+    </nav>
+    <div>
+      <div class="row mt-2">
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/71/1653591/1.jpg?9710" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">itel S18 6.6", 64GB ROM + 2GB RAM (UpTo 4GB), 5000mAh, 4G -
+            Black</span><br>
+          <span style="font-size: large;" id="itemPrice">$</span>
+          <p class="d-flex justify-content-between p"><em
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">$80,000
+            </em><span class="text-warning" id="itemPercent">-29%</span></p>
+        </div>
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/69/0227302/1.jpg?4025" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Samsung Galaxy A04 - 6.5" - Dual SIM - 4G LTE - 50MP - 5000mAh -
+            Facial Recognition 4GB/64GB Memory - Green</span><br>
+          <span style="font-size: large;" id="itemPrice">$ 80,500</span>
+          <p class="d-flex justify-content-between"><em
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">₦ 105,000
+            </em><span class="text-warning" id="itemPercent">-23%</span></p>
+        </div>
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/96/3591321/1.jpg?8402" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Infinix Smart 6 4G (X6511B) 6.6" HD+, 2GB RAM + 32GB ROM,
+            5000mAh, Android 11, 8MP Camera, 4G LTE, Fingerprint + Face ID - Black
+          </span><br>
+          <span style="font-size: large;" id="itemPrice">$66,990</span>
+          <p class="d-flex justify-content-between"><em
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">$ 70,000
+            </em><span class="text-warning" id="itemPercent">-4%</span></p>
+        </div>
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/36/062569/1.jpg?1644" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Android 8.1 4G+64G Tablet 10.1 Inch Quad Core WIFI Blu
+            Black</span><br>
+          <span style="font-size: large;" id="itemPrice">$ 85,683</span>
+          <p class="d-flex justify-content-between"><em
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">$111,387
+            </em><span class="text-warning" id="itemPercent">-23%</span></p>
+        </div>
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/53/1901202/1.jpg?8046" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">XIAOMI Poco M5, 6.58" (4GB RAM, 64GB ROM) Android 12 (50/2/2)MP
+            + 5MP Selfie - 4G - Dual Sim -facial Recognition, Fingerprint - 5000mAh- Black</span><br>
+          <span style="font-size: large;" id="itemPrice">$ 101,000</span>
+          <p class="d-flex justify-content-between"><em
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">$ 180,000
+            </em><span class="text-warning" id="itemPercent">-44%</span></p>
+        </div>
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/47/0016222/1.jpg?4111" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Apple IPad 10th Gen 10.9" Wi-Fi 64GB - Blue - 2022 -
+            Model</span><br>
+          <span style="font-size: large;" id="itemPrice">$ 385,999</span>
+          <p class="d-flex justify-content-between"><em
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">$ 700,999
+            </em><span class="text-warning" id="itemPercent">-45%</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Large Appliance -->
+  <section class="appliance container-fluid mt-3">
+    <nav class="p-3" style="background-color: #c3def0;">
+      <ul class="nav justify-content-between">
+        <li class="nav-item">
+          <h5 class="text-dark">Large Appliances (Pay on Delivery)</h5>
+        </li>
+        <li class="nav-item seeAll">
+          <a href="electronics.html" class="text-dark" style="text-decoration: none;">See All Items ></a>
+        </li>
+    </nav>
+    <div>
+      <div class="row mt-2">
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/87/1332231/1.jpg?4843" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Haier Thermocool HTF-150H Chest Freezer (Storage Volume
+            146L)</span><br>
+          <span style="font-size: large;" id="itemPrice">$ 163,512</span>
+          <p class="d-flex justify-content-between"><em
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">$ 188,039
+            </em><span class="text-warning" id="itemPercent">-13%</span></p>
+        </div>
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/92/1243821/1.jpg?0470" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Nexus 1Hp Split Air Conditioner with full installation Kit -
+            R410 GAS
+            NX-MSSH9000SC</span><br>
+          <span style="font-size: large;" id="itemPrice">$ 167,400</span>
+          <p class="d-flex justify-content-between"><em
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">$ 192,510
+            </em><span class="text-warning" id="itemPercent">-13%</span></p>
+        </div>
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/23/4243011/1.jpg?5748" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Haier Thermocool 192 Litres 1 Door DCool Refrigerator - HR-195CS
+            R6 SLV -
+            Silver</span><br>
+          <span style="font-size: large;" id="itemPrice">$ 178,718</span>
+          <p class="d-flex justify-content-between"><em
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">$ 205,526
+            </em><span class="text-warning" id="itemPercent">-13%</span></p>
+        </div>
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/06/951058/1.jpg?2917" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Hisense 65" UHD 4K SMART TV,3 HDMI,2 USB, 1 AV, Free Wall
+            Bracket, WIFI,
+            LAN</span><br>
+          <span style="font-size: large;" id="itemPrice">$58,990</span>
+          <p class="d-flex justify-content-between"><em
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">$ 72,000
+            </em><span class="text-warning" id="itemPercent">-18%</span></p>
+
+        </div>
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/43/0104011/1.jpg?0857" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Haier Thermocool 1.5HP Air Conditioner (HSU-12TESN-02) With 1
+            Minute Instant
+            Chill. + Free Installation Kits</span><br>
+          <span style="font-size: large;" id="itemPrice">$ 197,575</span>
+          <p class="d-flex justify-content-between"><em
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">$ 227,211
+            </em><span class="text-warning" id="itemPercent">-13%</span></p>
+          </h6>
+        </div>
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/67/4203591/1.jpg?4994" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Nexus UPRIGHT SHOWCASE FRIDGE NX-401</span>
+          </span><br>
+
+          <span style="font-size: large;" id="itemPrice">$287,496</span>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Executive Deals -->
+  <section class="executive container-fluid mt-3" id="executiveDeals">
+    <nav class="p-2" style="background-color: #c3def0;">
+      <ul class="nav justify-content-between">
+        <li class="nav-item">
+          <h5 class="text-dark">Exclusive item |<span class="lead"> Up to 50% Off</span></h5>
+        </li>
+        <li class="nav-item seeAll">
+          <a href="electronics.html" class="text-dark" style="text-decoration: none;">See All Items ></a>
+        </li>
+    </nav>
+    <div>
+      <div class="row mt-2">
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/709/1.jpg?1605" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Saisho Electric Hot Plate HP-10</span><br>
+          <span style="font-size: large;" id="itemPrice">$ 10,557</span>
+        </div>
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/88/519578/1.jpg?2406" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Qasa 7 Inches Rechargeable Table Fan</span><br>
+          <span style="font-size: large;" id="itemPrice">$ 10,998</span>
+          <p class="d-flex justify-content-between"><em
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">$ 17,040
+            </em><span class="text-warning" id="itemPercent">-35%</span></p>
+          </h6>
+        </div>
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/39/970028/1.jpg?7175" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Ox 18-Inch Plus Rechargeable Standing Fan Wit Remote
+            Control.</span><br>
+          <span style="font-size: large;" id="itemPrice">$ 41,999</span>
+          <p class="d-flex justify-content-between"><em
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">$ 50,000
+            </em><span class="text-warning" id="itemPercent">-16%</span></p>
+        </div>
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/40/7749612/1.jpg?2169" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">SUMEC FIRMAN 5.5kva Sumec Firman RD3910EX Rugged
+            Generator</span><br>
+          <span style="font-size: large;" id="itemPrice">$ 280,000</span>
+          </h6>
+        </div>
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/86/727127/1.jpg?2967" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Silver Crest German Industrial 5000W Food Crusher Blender, EXTRA
+            MILL
+            JAR</span><br>
+          <span style="font-size: large;" id="itemPrice">$ 18,999</span>
+          <p class="d-flex justify-content-between"><em
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">$25,000
+            </em><span class="text-warning" id="itemPercent">-24%</span></p>
+
+        </div>
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/53/4243011/1.jpg?1349" alt=""
+            id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Haier Thermocool 519 Litres Chest Freezer - HTF-519IS R6 -
+            SILVER</span><br>
+          <span style="font-size: large;" id="itemPrice">$563,900
+          </span>
+          <p class="d-flex justify-content-between"><em
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">$ 648,485
+            </em><span class="text-warning" id="itemPercent">-13%</span></p>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fashion -->
+  <section class="phones container-fluid mt-3">
+    <nav class="p-3" style="background-color: #c3def0;">
+      <ul class="nav justify-content-between">
+        <li class="nav-item">
+          <h5 class="text-dark">Fashion</h5>
+        </li>
+        <li class="nav-item seeAll">
+          <a href="fashion.html" class="text-dark" style="text-decoration: none;">See All Items ></a>
+        </li>
+    </nav>
+    <div class="row mt-2">
+      <div class="col-6 col-md-2 rounded item">
+        <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/97/2902721/1.jpg?4963" alt=""
+          id="image" />
+        <br />
+        <span style="font-size: 17px" id="itemTitle">Trendyol Skirt - Black - Mini</span><br />
+        <span style="font-size: large" id="itemPrice">$ 8,637</span>
+        <p class="d-flex justify-content-between">
+          <em style="
+                text-decoration: line-through;
+                font-size: small;
+                color: #424242;
+              " id="itemOldPrice">₦ 33,833 </em><span class="text-warning" id="itemPercent">-74%</span>
+        </p>
+      </div>
+      <div class="col-6 col-md-2 rounded item">
+        <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/29/379977/1.jpg?5638" alt=""
+          id="image" />
+        <br />
+        <span style="font-size: 17px" id="itemTitle">Men's Premium Leather Sandal - Brown</span><br />
+        <span style="font-size: large" id="itemPrice">$ 6,250</span>
+      </div>
+      <div class="col-6 col-md-2 rounded item">
+        <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/31/954079/1.jpg?2269" alt=""
+          id="image" />
+        <br />
+        <span style="font-size: 17px" id="itemTitle">Danami Grace Fortified Hooded Short Gown- Pink </span><br />
+        <span style="font-size: large" id="itemPrice">$ 6,999</span>
+      </div>
+      <div class="col-6 col-md-2 rounded item">
+        <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/42/724079/1.jpg?0219" alt=""
+          id="image" />
+        <br />
+        <span style="font-size: 17px" id="itemTitle">Defacto Woman Regular Fit Knitted Trousers - Beige </span><br />
+        <span style="font-size: large" id="itemPrice">$ 5,168</span>
+        <p class="d-flex justify-content-between">
+          <em style="
+                text-decoration: line-through;
+                font-size: small;
+                color: #424242;
+              " id="itemOldPrice">$ 14,400 </em><span class="text-warning" id="itemPercent">-64%</span>
+        </p>
+      </div>
+      <div class="col-6 col-md-2 rounded item">
+        <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/94/024154/1.jpg?8902" alt=""
+          id="image" />
+        <br />
+        <span style="font-size: 17px" id="itemTitle">Portable Plaid PU Leather Handbag - Grey</span><br />
+        <span style="font-size: large" id="itemPrice">$ 4,450</span>
+        <p class="d-flex justify-content-between">
+          <em style="text-decoration: line-through;
+font-size: small;
+color: #424242;
+" id="itemOldPrice">$ 8,783 </em><span class="text-warning" id="itemPercent">-49%</span>
+        </p>
+      </div>
+      <div class="col-6 col-md-2 rounded item">
+        <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/92/314425/1.jpg?3783" alt=""
+          id="image" />
+        <br />
+        <span style="font-size: 17px" id="itemTitle">Women Ladies Mini Portable Handbag - White </span><br />
+        <span style="font-size: large" id="itemPrice">$ 6,500</span>
+        <p class="d-flex justify-content-between">
+          <em style="
+                text-decoration: line-through;
+                font-size: small;
+                color: #424242;
+              " id="itemOldPrice">$ 7,000 </em><span class="text-warning" id="itemPercent">-7%</span>
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Phone   -->
+  <section class="phones container-fluid mt-3 text-center">
+    <nav class="p-2" style="background-color: #c3def0;">
+      <h5 class="text-dark">Phones & Accessories</h5>
+    </nav>
+    <div>
+      <div class="row mt-2">
+        <div class="col-6 col-md-2 rounded p-4">
+          <a href="phonesTablet.html"><img
+              src="https://ng.jumia.is/cms/0-1-category-pages/phones-tablets/android-phones_300x300.png" alt=""
+              id="image"></a>
+          <br>
+          <span style="font-size: 17px;">Below $80,000</span>
+        </div>
+        <div class="col-6 col-md-2 rounded p-4">
+          <a href="phonesTablet.html"><img
+              src="https://ng.jumia.is/cms/0-1-category-pages/phones-tablets/iphones_300x300.png" alt="" id="image"></a>
+          <br>
+          <span style="font-size: 17px;">Below $300,000</span>
+          </h6>
+        </div>
+        <div class="col-6 col-md-2 rounded p-4">
+          <a href="phonesTablet.html"><img
+              src="https://ng.jumia.is/cms/0-1-category-pages/phones-tablets/android-tablets_300x300.png" alt=""
+              id="image"></a>
+          <br>
+          <span style="font-size: 17px;">Below $200,000</span>
+        </div>
+        <div class="col-6 col-md-2 rounded p-4">
+          <a href="phonesTablet.html"><img
+              src="https://ng.jumia.is/cms/0-1-category-pages/phones-tablets/accesories_300x300.jpg" alt=""
+              id="image"></a>
+          <br>
+          <span style="font-size: 17px;">Below $15,000</span>
+        </div>
+        <div class="col-6 col-md-2 rounded p-4">
+          <a href="phonesTablet.html">
+            <img src="https://ng.jumia.is/cms/0-1-category-pages/phones-tablets/cellphones_300x300.png" alt=""
+              id="image"></a>
+          <br>
+          <span style="font-size: 17px;">Below $10,000</span>
+        </div>
+        <div class="col-6 col-md-2 rounded p-4">
+          <a href="phonesTablet.html"><img
+              src="https://ng.jumia.is/cms/0-1-category-pages/phones-tablets/brand-phones_300x300.png" alt=""
+              id="image"></a>
+          <br>
+          <span style="font-size: 17px;">Below $80,000</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Large Devices Footer -->
+  <footer class="d-none d-md-block bg-dark text-light mt-4 lgFooter" style="color: #b5b5b5 !important;"
+    id="lgDeviceFooter">
+    <nav style="font-size: 16px;background-color: #2e2e2e;" class="pt-2 ps-4">
+      <ul class="nav justify-content-between align-items-center">
+        <li class="nav-item">
+          <div class="d-flex"><i class="bi bi-envelope fs-2"></i>
+            <span class="ms-1">
+              <h6 style="font-size: small;">EMAIL SUPPORT</h6>
+              <p>help@JUMIA.com</p>
+            </span>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="d-flex">
+            <i class="bi bi-telephone fs-2"></i>
+            <span class="ms-1">
+              <h6 style="font-size: small;">PHONE SUPPORT</h6>
+              <p>09022688865</p>
+            </span>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="d-flex">
+            <i class="bi bi-whatsapp fs-2"></i>
+            <span class="ms-1">
+              <h6 style="font-size: small;">WHATSAPP</h6>
+              <p>09015842441</p>
+            </span>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="d-flex">
+            <span class="ms-1">
+              <h6 style="font-size: small;">GET LATEST item</h6>
+              <p>Our best promotions sent to your inbox</p>
+            </span>
+          </div>
+        </li>
+        <li class="nav-item d-flex me-3" style="height: 40px;">
+          <input type="text" class="subTerm" placeholder="Email Address">
+          <button class="subButton">
+            Subscribe
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <section>
+      <nav class="d-flex justify-content-between p-2">
+        <ul>
+          <h5>ABOUT jumia</h5>
+          <li>Contact Us</li>
+          <li>About Us</li>
+          <li>Terms & Conditions</li>
+        </ul>
+        <ul>
+          <h5>PAYMENT</h5>
+          <li>Wallet</li>
+          <li>Mastercard</li>
+          <li>Visa</li>
+        </ul>
+        <ul>
+          <h5>BUYING ON jumia</h5>
+          <li>Buyer Safety Centre</li>
+          <li>FAQs</li>
+          <li>Delivery</li>
+          <li>Digital Services</li>
+          <li>Bulk Purchase</li>
+        </ul>
+        <ul class="me-5">
+          <h5>CONNECT WITH US</h5>
+          <div class="d-flex justify-content-between">
+            <li><a href=""><i class="bi bi-facebook fs-2"></i></a></li>
+            <li><a href=""><i class="bi bi-whatsapp fs-2"></i></a></li>
+            <li><a href=""><i class="bi bi-twitter fs-2"></i></a></li>
+          </div>
+        </ul>
+      </nav>
+      <p class="text-center"><em>Copyright © 2024 jumia.com. All rights reserved</em></p>
+    </section>
+  </footer>
+
+  <!--Small Devices Footer -->
+  <footer class="sticky-bottom" id="smDeviceFooter">
+    <div class="text-center d-md-none bg-white">
+      <ul class="nav justify-content-between">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="jumia.html" style="color: #0f8cdf;"><i
+              class="bi bi-house-door"></i>
+            <br>
+            Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="adminlogin.html"><i class="bi bi-person-circle"></i><br>
+            Admin </a>
+        </li>
+        <li class="nav-item position-relative">
+          <a class="nav-link" aria-current="page" href="cart.html"><i class="bi bi-cart3"></i><br>
+            Cart
+            <span class="position-absolute start-100 translate-middle badge rounded-pill bg-danger" id="badge2"
+              style="top: 10px;">
+              0
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" aria-current="page" href="#"><i
+              class="bi bi-justify-right"></i> <br>
+            More</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <!-- Menu Canvas -->
+  <div class="offcanvas offcanvas-start" style="width: 80%;" tabindex="-1" id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel"><em class="fw-bold">OTCA <i
+            class="bi bi-stars text-warning"></i></em></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fs-3" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="bi bi-justify"></i> Categories
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="home-kitchen.html">Home and Kitchen</a></li>
+            <li><a class="dropdown-item" href="phonesTablet.html">Phones and Tablets</a></li>
+            <li><a class="dropdown-item" href="electronics.html">Electronics</a></li>
+            <li><a class="dropdown-item" href="fashion.html">Fashion</a></li>
+            <li><a class="dropdown-item" href="otherCategories.html">Other Categories</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fs-3 signInChange" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="bi bi-person"></i> ACCOUNT
+          </a>
+          <ul class="dropdown-menu">
+            <li class="text-center logOutChange"><a class="dropdown-item" href="#"><button class="btn col-12"
+                  style="background-color: #f68b1e;color: #fff;" onclick="signIn()">SIGN IN</button></a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#"></a></li>
+            <li><a class="dropdown-item" href="#"> <i class="bi bi-person fs-5"> My Account</i> </a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-box2 fs-5"> Orders</i></a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-3 " aria-current="page" href="#"><i class="bi bi-question-lg"></i>Help</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-3 " aria-current="page" href="cart.html"><i class="bi bi-cart3 "></i> Cart</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fs-3" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="bi bi-telephone"></i> Contact Us
+          </a>
+          <ul class="dropdown-menu">
+            <div class="d-flex">
+              <li class="dropdown-item"><a href=""><i class="bi bi-facebook fs-2"></i></a></li>
+              <li class="dropdown-item"><a href=""><i class="bi bi-linkedin fs-2"></i></a></li>
+              <li class="dropdown-item"><a href=""><i class="bi bi-twitter fs-2"></i></a></li>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="../Js/jss.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
